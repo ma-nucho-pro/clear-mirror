@@ -1,0 +1,42 @@
+{
+  "version": "1.0",
+  "mode": "reflection",
+  "target": "Whether to ship the first public release this week",
+  "direct_read": "The release is possible, but the current plan is optimizing polish before testing demand.",
+  "observed_facts": [
+    "The repository has a runnable local test suite.",
+    "No external user feedback has been collected yet."
+  ],
+  "assumptions": [
+    "More README polish will materially improve adoption before a first user test."
+  ],
+  "blind_spots": [
+    {
+      "claim": "The launch page must be perfect before sharing it.",
+      "challenge": "Perfection is being used as a gate without evidence that it reduces the main adoption risk.",
+      "consequence": "Time is spent on presentation while the demand assumption remains untested.",
+      "test": "Share the current version with five target users and record whether they install or ask a question."
+    }
+  ],
+  "opportunity_cost": "Each week spent polishing instead of testing delays evidence about whether the problem matters.",
+  "priorities": [
+    {
+      "rank": 1,
+      "change": "Run a small user test before adding more polish.",
+      "why": "It reduces the highest-impact uncertainty first.",
+      "next_action": "Send the repository to five relevant users and ask them to install one workflow.",
+      "proof": "Five responses are recorded with install attempts, blockers, and requested changes."
+    },
+    {
+      "rank": 2,
+      "change": "Fix only blockers found in the test.",
+      "why": "It keeps effort tied to observed friction.",
+      "next_action": "Group feedback into adoption, usability, and feature requests.",
+      "proof": "Every change references a reported blocker or is explicitly deferred."
+    }
+  ],
+  "uncertainty": [
+    "UNVERIFIED: whether the intended users will adopt the workflow after installation."
+  ],
+  "next_question": null
+}

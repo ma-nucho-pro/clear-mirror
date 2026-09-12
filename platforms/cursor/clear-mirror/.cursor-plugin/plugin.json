@@ -1,0 +1,21 @@
+{
+  "name": "clear-mirror",
+  "displayName": "Clear Mirror",
+  "description": "Direct, evidence-grounded strategic reflection: challenge assumptions, expose blind spots, and produce a prioritized plan.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Roberto Manuel Jara Peche"
+  },
+  "homepage": "https://github.com/ma-nucho-pro/clear-mirror",
+  "repository": "https://github.com/ma-nucho-pro/clear-mirror",
+  "license": "MIT",
+  "keywords": [
+    "agent-skills",
+    "strategic-thinking",
+    "critical-thinking",
+    "decision-support",
+    "honest-feedback"
+  ],
+  "logo": "assets/clear-mirror-logo.svg",
+  "skills": "./skills/"
+}

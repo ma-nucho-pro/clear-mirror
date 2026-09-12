@@ -1,0 +1,15 @@
+{
+  "name": "clear-mirror",
+  "version": "1.0.0",
+  "description": "Direct, evidence-grounded strategic reflection skill for AI agents.",
+  "type": "module",
+  "scripts": {
+    "test": "node tests/run.mjs",
+    "check": "node scripts/validate-package.mjs"
+  },
+  "engines": {
+    "node": ">=18.17"
+  },
+  "license": "MIT",
+  "author": "Roberto Manuel Jara Peche"
+}
