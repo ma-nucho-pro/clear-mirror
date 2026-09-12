@@ -52,6 +52,16 @@ observed facts → assumptions → counterarguments
 
 Clear Mirror is a decision-support skill. It does not replace a domain professional, a safety process, or the user's judgment.
 
+## How it fits with Supervisor and Wonder Woman
+
+Clear Mirror complements the other projects in this family; it is not a replacement for them.
+
+- **Clear Mirror** is an on-demand strategic reflection layer. It examines a user's decision, reasoning, or observable behavior and returns a direct read, visible assumptions, counterarguments, opportunity cost, and a prioritized plan.
+- **[SupervisorLLM](https://github.com/ma-nucho-pro/supervisorLLM), [supervisorLLM-plugin](https://github.com/ma-nucho-pro/supervisorLLM-plugin), [supervisor-claude-plugin](https://github.com/ma-nucho-pro/supervisor-claude-plugin), and [supervisor-skill-claude](https://github.com/ma-nucho-pro/supervisor-skill-claude)** are orchestration and quality-gate projects for supervising broader agent work.
+- **[Wonder Woman](https://github.com/ma-nucho-pro/Wonder-Woman) and [Wonder-Woman-Claude-Code](https://github.com/ma-nucho-pro/Wonder-Woman-Claude-Code)** are adversarial verification projects for evidence, claims, and release confidence.
+
+Clear Mirror therefore does not require an always-on hook, a fixed 16-judge tribunal, or a release gate. It can be used before those workflows to sharpen the problem and the plan; when the host exposes real independent subagents, its optional roles can add review, but it never simulates a panel or claims a judge ran without host evidence.
+
 ## The response shape
 
 For a strategic or high-impact request, the skill normally organizes the answer as:
