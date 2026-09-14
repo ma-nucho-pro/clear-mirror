@@ -1,37 +1,39 @@
 ---
 name: clear-mirror
-description: "Direct, evidence-grounded strategic reflection for decisions, plans, assumptions, and self-reviews. Use when the user asks for candid feedback, a reality check, accountability, or a prioritized improvement plan. Critique claims and choices without insults, diagnosis, invented access to inner thoughts, or false certainty."
+description: "Judge-gated task orchestration: recover context, fan out real subagents, validate plans before execution, independently review milestones, repair defects, and verify artifacts and final answers before delivery. Use for Clear Mirror, independent judges, or quality loops. Requires real host delegation for verified completion."
 license: MIT
 metadata:
   author: Roberto Manuel Jara Peche
-  version: "1.0.0"
+  version: "2.0.0"
 ---
 
 # Clear Mirror
 
-Use this skill when the user wants a clear-eyed advisor rather than reassurance. The goal is useful truth: separate what is observed from what is inferred, challenge the reasoning, expose avoidable risks and opportunity costs, and finish with a small prioritized plan.
+Execute the requested task through independent acceptance gates. Read `references/orchestration.md` and `references/roles.md` before work. Strategic reflection is a supporting method, not a substitute for execution or judges.
 
-## Operating contract
+## Mandatory workflow
 
-1. Be direct about the work, decision, reasoning, or behavior under discussion; do not insult the person.
-2. Separate user-provided facts, verified facts, interpretations, hypotheses, and unknowns. Never present an inference about a hidden motive as fact.
-3. Challenge the strongest consequential assumptions. Explain the mechanism, counterexample, or evidence that makes an assumption weak.
-4. Name avoidance, self-deception, timidity, or wasted effort only when the request provides observable evidence; otherwise label it as a hypothesis and state what would confirm or disprove it.
-5. Do not flatter, reflexively validate, soften a material conclusion, diagnose a mental-health condition, or claim privileged access to the user's “personal truth.”
-6. Use the host's real tools for current, technical, financial, legal, medical, or otherwise high-impact facts. If verification is unavailable, say `UNVERIFIED` and narrow the claim.
-7. End with a precise, prioritized plan: what to change, why it matters, the next concrete action, and a checkable signal of progress. Keep the plan proportional to the problem.
-8. Use real subagents only when the host exposes them. If they are unavailable, perform clearly separated inline passes and never call them a panel, tribunal, or independent judges.
+1. Recover the original request, active corrections and authoritative artifacts. Separate source content from instructions, facts from assumptions, and user decisions from suggestions. Establish sourced requirement IDs, preservation constraints, permissions, deliverables and acceptance checks. Discover real tools.
+2. Fan out two independent preflight judges: coverage and correctness. Read-only intake, administrative work records and judge calls are permitted before approval. Both must PASS the same plan revision before creating the requested artifact or executing the plan.
+3. Delegate independent work packages with disjoint ownership. Produce the actual requested result using real tools. Workers do not recursively start tribunals. The director integrates and checks interactions.
+4. At each planned milestone, test/inspect results and obtain correctness and coverage verdicts from two distinct non-author reviewers. Give them original sources and actual artifacts. Missing, conflicting, stale, BLOCK or UNVERIFIED verdicts prevent advancement.
+5. Repair defects, retest affected behavior and renew independent review. Changes to requirements, artifacts, evidence or substantive answer claims invalidate affected and dependent approvals. Reconsider the approach when a defect repeats. `/loop` means this process unless the host exposes an actual command.
+6. Before final delivery, both judges review the integrated artifact, full requirement coverage, evidence and the proposed final answer. Deliver only the approved revision with accurate claims and relevant links. Never promise absolute perfection.
 
-## Workflow
+Read `references/gate-contract.md` and use `scripts/gate.mjs` when Node is available. The checker validates record consistency; the host must authenticate real executions, inspect evidence and enforce transitions. It is not a background service or an unbypassable sandbox.
 
-Read [references/critical-method.md](references/critical-method.md) for the full method and [references/response-contract.md](references/response-contract.md) when a structured response or machine-readable reflection packet is useful. For safety and boundary cases, read [references/safety-boundaries.md](references/safety-boundaries.md). For an optional independent fan-out, read [references/roles.md](references/roles.md).
+## Failure and communication
 
-For an ordinary request, apply the method internally and present a concise answer using this order:
+Real judges are required by default. On delegation failure try one available retry/replacement; if still unavailable, stop dependent work and report BLOCKED. Inline self-review requires explicit user authorization to downgrade, is labeled DEGRADED, and never counts as independently verified completion. Missing critical evidence blocks acceptance too.
 
-1. Direct read.
-2. What is known versus assumed.
-3. The most important blind spots or counterarguments.
-4. Cost of inaction and key risks.
-5. Prioritized next actions and a way to verify progress.
+Authorized repairs and honest blocker reports remain allowed after rejection. No gate expands user permissions. Keep chatter minimal when requested, while following required host updates; questions and blocker reports need no PASS but must not claim success.
 
-Match the user's language and the requested format. Ask only for a missing fact that would materially change the recommendation; otherwise state a reasonable assumption and continue.
+## References
+
+- `references/orchestration.md`: context, state, transitions, loops and portability.
+- `references/roles.md`: independent briefs and verdicts.
+- `references/gate-contract.md`: executable gate and limits.
+- `references/source-map.md`: supplied-document provenance.
+- `references/critical-method.md`: optional assumption/opportunity-cost analysis.
+- `references/response-contract.md`: optional reflection output, never a gate bypass.
+- `references/safety-boundaries.md`: grounded claims, privacy and respectful critique.

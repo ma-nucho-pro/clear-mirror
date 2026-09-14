@@ -1,5 +1,7 @@
 # Response and reflection contract
 
+V1 reflection remains an optional output format in v2. A valid reflection packet does not establish judge approval or bypass orchestration gates.
+
 The normal user-facing response is prose. This contract gives the host a stable internal shape when the task benefits from structured review, export, testing, or another agent consuming the result.
 
 ## User-facing shape

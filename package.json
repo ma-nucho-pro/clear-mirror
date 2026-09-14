@@ -1,7 +1,7 @@
 {
   "name": "clear-mirror",
-  "version": "1.0.0",
-  "description": "Direct, evidence-grounded strategic reflection skill for AI agents.",
+  "version": "2.0.0",
+  "description": "Judge-gated orchestration: context, fan-out, execution, repair and verified delivery.",
   "type": "module",
   "scripts": {
     "test": "node tests/run.mjs",

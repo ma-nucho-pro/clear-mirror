@@ -5,11 +5,11 @@
 <h1 align="center">Clear Mirror</h1>
 
 <p align="center">
-  <strong>A clear-eyed strategic advisor for AI agents.</strong>
+  <strong>Independent judges before execution and delivery.</strong>
 </p>
 
 <p align="center">
-  Challenge assumptions. Expose blind spots. Leave with a plan.
+  Recover context. Delegate. Execute. Review. Repair. Verify.
 </p>
 
 <p align="center">
@@ -28,52 +28,50 @@
   <img src="https://img.shields.io/badge/CODEX-ADAPTER-10a37f?style=for-the-badge" alt="Codex adapter">
 </p>
 
-Clear Mirror is for moments when reassurance is less useful than a precise reality check. It turns a request for “be honest with me” into a disciplined reflection: evidence first, assumptions made visible, strong counterarguments, opportunity cost, and a prioritized next move.
+Clear Mirror v2 is a portable orchestration skill for work that must be reviewed before execution and before the final answer. It turns a natural-language request into sourced requirements, real delegated work, independent acceptance gates and a repair loop.
 
 ```text
-request or plan
-       ↓
-observed facts → assumptions → counterarguments
-       ↓                  ↓
-  opportunity cost   uncertainty
-       \              /
-        prioritized action plan
+request + sources → context/requirements
+                 → two preflight judges
+                 → delegated execution
+                 → correctness + coverage judges
+                 → repair / retest / review
+                 → final artifact + answer review
+                 → delivery
 ```
 
 ## What it does
 
-- Gives a direct conclusion without reflexive validation or flattery.
-- Separates supplied/verified facts from interpretations, hypotheses, and unknowns.
-- Tests the assumptions that can most change the outcome.
-- Calls out observable avoidance patterns and the cost of inaction without pretending to read minds.
-- Uses current, authoritative evidence when the topic requires research.
-- Produces a small, checkable plan ordered by leverage and dependency.
-- Uses real host subagents when available and explicitly degrades when they are not.
+- Recovers relevant context and preserves user corrections and constraints.
+- Launches independent coverage and correctness judges before artifact creation.
+- Splits independent work into bounded tasks using real host subagents.
+- Reviews intermediate results before advancing to dependent milestones.
+- Resolves defects with evidence, targeted repairs and renewed review.
+- Invalidates approvals when reviewed requirements, artifacts or claims change.
+- Reviews the final artifact and proposed answer before delivery.
+- Requires real judges by default. Missing delegation blocks strict completion; only explicit user authorization permits a qualified single-agent downgrade.
 
-Clear Mirror is a decision-support skill. It does not replace a domain professional, a safety process, or the user's judgment.
+Read [the workflow](skills/clear-mirror/references/orchestration.md) and [judge briefs](skills/clear-mirror/references/roles.md). The supplied universal-context documents informed context recovery, provenance, coverage and correction; [source mapping](skills/clear-mirror/references/source-map.md) identifies the inspected sections.
 
-## How it fits with Supervisor and Wonder Woman
+## What changed from v1
 
-Clear Mirror complements the other projects in this family; it is not a replacement for them.
+V1 incorrectly narrowed the project to strategic reflection with optional agents. V2 makes judge-gated execution the primary behavior. The earlier reflection method and packet remain optional output formats inside the gates.
 
-- **Clear Mirror** is an on-demand strategic reflection layer. It examines a user's decision, reasoning, or observable behavior and returns a direct read, visible assumptions, counterarguments, opportunity cost, and a prioritized plan.
-- **[SupervisorLLM](https://github.com/ma-nucho-pro/supervisorLLM), [supervisorLLM-plugin](https://github.com/ma-nucho-pro/supervisorLLM-plugin), [supervisor-claude-plugin](https://github.com/ma-nucho-pro/supervisor-claude-plugin), and [supervisor-skill-claude](https://github.com/ma-nucho-pro/supervisor-skill-claude)** are orchestration and quality-gate projects for supervising broader agent work.
-- **[Wonder Woman](https://github.com/ma-nucho-pro/Wonder-Woman) and [Wonder-Woman-Claude-Code](https://github.com/ma-nucho-pro/Wonder-Woman-Claude-Code)** are adversarial verification projects for evidence, claims, and release confidence.
+Clear Mirror is related to [SupervisorLLM](https://github.com/ma-nucho-pro/supervisorLLM), [supervisorLLM-plugin](https://github.com/ma-nucho-pro/supervisorLLM-plugin), [supervisor-claude-plugin](https://github.com/ma-nucho-pro/supervisor-claude-plugin), [supervisor-skill-claude](https://github.com/ma-nucho-pro/supervisor-skill-claude), [Wonder Woman](https://github.com/ma-nucho-pro/Wonder-Woman) and [Wonder-Woman-Claude-Code](https://github.com/ma-nucho-pro/Wonder-Woman-Claude-Code). Its portable contract coordinates review around the whole requested task. It does not bundle their runtimes or manufacture a fixed tribunal.
 
-Clear Mirror therefore does not require an always-on hook, a fixed 16-judge tribunal, or a release gate. It can be used before those workflows to sharpen the problem and the plan; when the host exposes real independent subagents, its optional roles can add review, but it never simulates a panel or claims a judge ran without host evidence.
+## Executable gate
 
-## The response shape
+```bash
+node skills/clear-mirror/scripts/gate.mjs packet.json
+npm test
+npm run check
+```
 
-For a strategic or high-impact request, the skill normally organizes the answer as:
+The portable checker rejects inconsistent advancement packets: stale reviews/evidence, missing coverage, author self-review, duplicate reviewers, failed criteria, unresolved findings and changed final hashes. See [the exact packet contract](skills/clear-mirror/references/gate-contract.md).
 
-1. **Direct read** — what the available evidence says.
-2. **Facts vs. assumptions** — what is known, inferred, and still unknown.
-3. **Blind spots / counterarguments** — the strongest weaknesses and alternative explanations.
-4. **Cost of inaction** — direct cost, opportunity cost, risk, and reversibility.
-5. **Prioritized plan** — change, reason, next action, and observable proof.
-6. **Uncertainty** — what remains `UNVERIFIED` and the smallest test that would resolve it.
+**The checker validates records, not truth.** The host must authenticate actual judge invocations/results, inspect evidence, compute revisions from real content and enforce gate order. The skill is a multi-step host-executed workflow, not a daemon, hidden model API or unbypassable enforcement service. A fabricated internally consistent packet cannot be authenticated by this offline checker.
 
-The full contract is in [`skills/clear-mirror/references/response-contract.md`](skills/clear-mirror/references/response-contract.md).
+`/loop` means execute → inspect → repair → review until the requested criteria pass, unless the host genuinely exposes that command. It never means guaranteed perfection or endless polishing.
 
 ## Install the portable skill
 
@@ -143,7 +141,7 @@ npm test
 node scripts/validate-package.mjs
 ```
 
-The validator checks the canonical skill, required references, adapter manifests, byte-identical skill copies, logo assets, package metadata, and accidental credential patterns. The tests also exercise the deterministic reflection-packet contract.
+The validator checks the canonical skill, required references/scripts, adapter manifests, full byte-identical skill copies, logo assets, package metadata, and accidental credential patterns. Tests exercise strict gate rejection cases and retain the v1 reflection-packet checks. These are deterministic package checks, not proof that every host ran real judges.
 
 ## Contributing
 

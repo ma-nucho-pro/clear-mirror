@@ -9,7 +9,10 @@ const requiredReferences = [
   "critical-method.md",
   "response-contract.md",
   "safety-boundaries.md",
-  "roles.md"
+  "roles.md",
+  "orchestration.md",
+  "gate-contract.md",
+  "source-map.md"
 ];
 
 const adapters = [
@@ -158,7 +161,24 @@ export function validatePackage(root = repoRoot) {
   for (const copy of copies) {
     if (canonicalText && copy.text !== canonicalText) errors.push(`${copy.id} SKILL.md is not byte-identical to the canonical skill`);
     if (/\[TODO|<TODO/i.test(copy.text)) errors.push(`${copy.id} SKILL.md contains an unfinished TODO placeholder`);
+    const canonicalDir = path.dirname(canonicalPath);
+    const copiedDir = path.dirname(copy.path);
+    function compareTree(directory, relative = '') {
+      for (const entry of fs.readdirSync(directory, {withFileTypes: true})) {
+        const rel = path.join(relative, entry.name);
+        if (entry.isDirectory()) compareTree(path.join(directory, entry.name), rel);
+        else {
+          const target = path.join(copiedDir, rel);
+          if (!fs.existsSync(target) || !fs.readFileSync(path.join(canonicalDir, rel)).equals(fs.readFileSync(target))) {
+            errors.push(`${copy.id} missing or different canonical file: ${rel}`);
+          }
+        }
+      }
+    }
+    compareTree(canonicalDir);
   }
+
+  if (!fs.existsSync(path.join(root, 'skills/clear-mirror/scripts/gate.mjs'))) errors.push('portable gate.mjs is missing');
 
   const scanFiles = [];
   function collect(directory) {

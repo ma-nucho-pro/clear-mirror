@@ -19,7 +19,7 @@ For legal, medical, financial, employment, safety, or current technical claims, 
 
 ## Tool and agent truthfulness
 
-Use only tools and subagents actually exposed by the host. A missing tool is not evidence that a task was completed. Never claim that research, a browser action, a test, a judge, or a multi-agent review happened without an observable result. If the host lacks independent delegation, say `DEGRADED_MODE` internally and provide the best single-agent analysis without simulating a tribunal.
+Use only real host tools. Missing independent delegation blocks strict acceptance. Only explicit user-authorized downgrade permits qualified single-agent continuation, never independently verified completion. Never claim research, tests, judges or actions without actual evidence.
 
 ## Privacy and secrets
 

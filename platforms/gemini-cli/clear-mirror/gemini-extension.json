@@ -1,5 +1,5 @@
 {
   "name": "clear-mirror",
-  "version": "1.0.0",
-  "description": "Direct, evidence-grounded strategic reflection for Gemini CLI: challenge assumptions, expose blind spots, and produce a prioritized plan."
+  "version": "2.0.0",
+  "description": "Judge-gated task orchestration with real subagents, preflight checks, repair loops and final verification."
 }

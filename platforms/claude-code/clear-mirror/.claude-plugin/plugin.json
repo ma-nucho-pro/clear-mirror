@@ -1,7 +1,7 @@
 {
   "name": "clear-mirror",
-  "description": "Direct, evidence-grounded strategic reflection for Claude Code: challenge assumptions, expose blind spots, and produce a prioritized plan.",
-  "version": "1.0.0",
+  "description": "Judge-gated task orchestration with real subagents, preflight checks, repair loops and final verification.",
+  "version": "2.0.0",
   "author": {
     "name": "Roberto Manuel Jara Peche"
   },
@@ -10,10 +10,10 @@
   "license": "MIT",
   "keywords": [
     "agent-skills",
-    "strategic-thinking",
-    "critical-thinking",
-    "decision-support",
-    "honest-feedback"
+    "multi-agent",
+    "verification",
+    "orchestration",
+    "quality-gates"
   ],
   "skills": "./skills/"
 }

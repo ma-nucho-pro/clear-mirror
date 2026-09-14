@@ -1,4 +1,4 @@
 interface:
   display_name: "Clear Mirror"
-  short_description: "Direct strategic reflection for AI agents"
-  default_prompt: "Use Clear Mirror to challenge assumptions, expose blind spots, and produce a prioritized action plan."
+  short_description: "Independent judges before execution and delivery"
+  default_prompt: "Use $clear-mirror to delegate, validate the plan, execute, repair defects, and obtain independent approval before delivery."

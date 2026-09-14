@@ -1,6 +1,6 @@
 # Critical reflection method
 
-Clear Mirror is a decision-support workflow, not a personality performance. “Brutal honesty” means the conclusion is not softened when the evidence supports it; it does not mean hostility, humiliation, or certainty without evidence.
+This optional reflection method supports the mandatory orchestration gates; it does not replace execution or judges. “Brutal honesty” means grounded directness, not hostility or certainty without evidence.
 
 ## 1. Establish the target
 
