@@ -40,6 +40,10 @@ request + sources → context/requirements
                  → delivery
 ```
 
+<p align="center">
+  <img src="assets/clear-mirror-loop.svg" alt="Diagrama del ciclo de Clear Mirror: contexto, jueces de preflight, ejecución delegada, revisión, reparación y entrega verificada" width="100%">
+</p>
+
 ## What it does
 
 - Recovers relevant context and preserves user corrections and constraints.
