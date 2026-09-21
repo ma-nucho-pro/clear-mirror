@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="520" viewBox="0 0 1200 520" role="img" aria-labelledby="title desc">
+  <title id="title">CLEAR MIRROR repository overview</title>
+  <desc id="desc">Recover context, delegate real work, review intermediate artifacts, repair defects and verify delivery.</desc>
+  <defs>
+    <pattern id="dots" width="18" height="18" patternUnits="userSpaceOnUse">
+      <circle cx="3" cy="3" r="2" fill="#111318" opacity=".65"/>
+    </pattern>
+    <linearGradient id="wash" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#e0b83f"/>
+      <stop offset="1" stop-color="#fff0a1"/>
+    </linearGradient>
+    <filter id="shadow" x="-15%" y="-15%" width="130%" height="140%">
+      <feDropShadow dx="0" dy="9" stdDeviation="7" flood-color="#111318" flood-opacity=".28"/>
+    </filter>
+  </defs>
+  <rect width="1200" height="520" rx="28" fill="url(#wash)"/>
+  <rect x="24" y="24" width="1152" height="472" rx="20" fill="#e0b83f" stroke="#111318" stroke-width="3"/>
+  <circle cx="1114" cy="66" r="122" fill="#241b08" opacity=".22"/>
+  <circle cx="48" cy="462" r="150" fill="#241b08" opacity=".16"/>
+  <rect x="24" y="24" width="1152" height="472" rx="20" fill="url(#dots)" opacity=".22"/>
+  <path d="M26 292H1174M405 25v470" stroke="#111318" stroke-width="2" opacity=".35"/>
+  <path d="M68 56h214M68 276h285" stroke="#111318" stroke-width="5"/>
+  <text x="68" y="52" fill="#111318" font-family="monospace" font-size="14px" font-weight="700" letter-spacing="1.4">MA-NUCHO PRO / JUDGE-GATED ORCHESTRATION</text>
+  <image href="project-logo.svg" x="68" y="80" width="130" height="130" preserveAspectRatio="xMidYMid meet"/>
+  <text x="222" y="112" fill="#111318" font-family="Arial, Helvetica, sans-serif" font-size="22px" font-weight="900" letter-spacing="-1.2">CLEAR MIRROR</text>
+  <text x="222" y="154" fill="#111318" font-family="Arial, Helvetica, sans-serif" font-size="14px" font-weight="700"><tspan x="222" dy="0">Independent judges</tspan><tspan x="222" dy="18">before execution and</tspan><tspan x="222" dy="18">delivery.</tspan></text>
+  <text x="68" y="220" fill="#111318" font-family="Arial, Helvetica, sans-serif" font-size="13px" font-weight="600"><tspan x="68" dy="0">Recover context, delegate real work,</tspan><tspan x="68" dy="18">review intermediate artifacts, repair</tspan><tspan x="68" dy="18">defects and verify delivery.</tspan></text>
+  <text x="68" y="289" fill="#111318" font-family="monospace" font-size="12px" font-weight="700">github.com/ma-nucho-pro/clear-mirror</text>
+  <g filter="url(#shadow)">
+    <rect x="68" y="326" width="288" height="112" rx="4" fill="#111318" stroke="#111318" stroke-width="3"/>
+    <rect x="68" y="326" width="288" height="26" fill="#f7f0e5" stroke="#111318" stroke-width="3"/>
+    <circle cx="85" cy="339" r="5" fill="#ff5d74"/><circle cx="101" cy="339" r="5" fill="#ffca58"/><circle cx="117" cy="339" r="5" fill="#51db8d"/>
+    <text x="136" y="344" fill="#111318" font-family="monospace" font-size="11px" font-weight="700">START HERE</text>
+    <text x="86" y="381" fill="#fff0a1" font-family="monospace" font-size="15px" font-weight="700">$</text>
+    <text x="105" y="381" fill="#f7f0e5" font-family="monospace" font-size="13px">npm test</text>
+    <text x="86" y="406" fill="#8d91a1" font-family="monospace" font-size="12px">&gt; inspect the README</text>
+    <text x="86" y="425" fill="#8d91a1" font-family="monospace" font-size="12px">&gt; ship something useful</text>
+  </g>
+  <g filter="url(#shadow)">
+    
+    <g>
+      <rect x="438" y="52" width="330" height="154" rx="3" fill="#fbf7ef" stroke="#101116" stroke-width="3"/>
+      <rect x="438" y="52" width="330" height="38" fill="#fff0a1" stroke="#101116" stroke-width="3"/>
+      <text x="456" y="77" fill="#111318" font-family="monospace" font-size="14px" font-weight="700">PROJECT</text>
+      <rect x="738" y="62" width="18" height="18" fill="#fbf7ef" stroke="#111318" stroke-width="2"/>
+      <path d="M742 66l10 10M752 66l-10 10" stroke="#111318" stroke-width="2"/>
+      <text x="714" y="77" fill="#25232a" font-family="monospace" font-size="11px" text-anchor="end">01</text>
+      <text x="457" y="113" fill="#222027" font-family="Arial, Helvetica, sans-serif" font-size="15px" font-weight="700"><tspan x="457" dy="0">Recover context, delegate real work,</tspan><tspan x="457" dy="22">review intermediate artifacts, repair</tspan><tspan x="457" dy="22">defects and verify delivery.</tspan></text>
+    </g>
+    
+    <g>
+      <rect x="790" y="52" width="330" height="154" rx="3" fill="#fbf7ef" stroke="#101116" stroke-width="3"/>
+      <rect x="790" y="52" width="330" height="38" fill="#fff0a1" stroke="#101116" stroke-width="3"/>
+      <text x="808" y="77" fill="#111318" font-family="monospace" font-size="14px" font-weight="700">FOCUS</text>
+      <rect x="1090" y="62" width="18" height="18" fill="#fbf7ef" stroke="#111318" stroke-width="2"/>
+      <path d="M1094 66l10 10M1104 66l-10 10" stroke="#111318" stroke-width="2"/>
+      <text x="1066" y="77" fill="#25232a" font-family="monospace" font-size="11px" text-anchor="end">02</text>
+      <text x="809" y="113" fill="#222027" font-family="Arial, Helvetica, sans-serif" font-size="15px" font-weight="700"><tspan x="809" dy="0">&gt; CONTEXT RECOVERY</tspan><tspan x="809" dy="22">&gt; PREFLIGHT JUDGES</tspan><tspan x="809" dy="22">&gt; VERIFIED DELIVERY</tspan></text>
+    </g>
+    
+    <g>
+      <rect x="438" y="226" width="330" height="154" rx="3" fill="#fbf7ef" stroke="#101116" stroke-width="3"/>
+      <rect x="438" y="226" width="330" height="38" fill="#fff0a1" stroke="#101116" stroke-width="3"/>
+      <text x="456" y="251" fill="#111318" font-family="monospace" font-size="14px" font-weight="700">STACK</text>
+      <rect x="738" y="236" width="18" height="18" fill="#fbf7ef" stroke="#111318" stroke-width="2"/>
+      <path d="M742 240l10 10M752 240l-10 10" stroke="#111318" stroke-width="2"/>
+      <text x="714" y="251" fill="#25232a" font-family="monospace" font-size="11px" text-anchor="end">03</text>
+      <text x="457" y="287" fill="#222027" font-family="Arial, Helvetica, sans-serif" font-size="15px" font-weight="700"><tspan x="457" dy="0">01  JAVASCRIPT</tspan><tspan x="457" dy="22">02  AGENT SKILL</tspan><tspan x="457" dy="22">03  SUBAGENTS</tspan><tspan x="457" dy="22">04  QUALITY GATES</tspan></text>
+    </g>
+    
+    <g>
+      <rect x="790" y="226" width="330" height="154" rx="3" fill="#fbf7ef" stroke="#101116" stroke-width="3"/>
+      <rect x="790" y="226" width="330" height="38" fill="#fff0a1" stroke="#101116" stroke-width="3"/>
+      <text x="808" y="251" fill="#111318" font-family="monospace" font-size="14px" font-weight="700">SIGNAL</text>
+      <rect x="1090" y="236" width="18" height="18" fill="#fbf7ef" stroke="#111318" stroke-width="2"/>
+      <path d="M1094 240l10 10M1104 240l-10 10" stroke="#111318" stroke-width="2"/>
+      <text x="1066" y="251" fill="#25232a" font-family="monospace" font-size="11px" text-anchor="end">2026-09-19</text>
+      <text x="809" y="287" fill="#222027" font-family="Arial, Helvetica, sans-serif" font-size="15px" font-weight="700"><tspan x="809" dy="0">STARS  1</tspan><tspan x="809" dy="22">LANG   JAVASCRIPT</tspan><tspan x="809" dy="22">BRANCH MAIN</tspan></text>
+    </g>
+  </g>
+  <text x="438" y="427" fill="#111318" font-family="monospace" font-size="12px" font-weight="700" letter-spacing="1">OPEN SOURCE  ·  JUDGE-GATED ORCHESTRATION  ·  JAVASCRIPT</text>
+  <text x="1130" y="468" fill="#111318" font-family="monospace" font-size="12px" text-anchor="end">CLEAR-MIRROR</text>
+</svg>

@@ -1,6 +1,8 @@
+<!-- manucho-readme-banner:start -->
 <p align="center">
-  <img src="assets/clear-mirror-social.png" alt="Clear Mirror — direct strategic reflection for AI agents" width="100%">
+  <img src="assets/readme/banner.svg" alt="CLEAR MIRROR project overview" width="100%">
 </p>
+<!-- manucho-readme-banner:end -->
 
 <h1 align="center">Clear Mirror</h1>
 
